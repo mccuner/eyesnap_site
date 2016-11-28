@@ -1,0 +1,40 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>EyeSnap</title>
+  <intercept-url pattern="/favicon.ico" access="ROLE_ANONYMOUS"></intercept-url>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="static/css/reset.css">
+  <link rel="stylesheet" href="static/css/styles.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+  <script type="text/javascript" src="static/js/album.js"></script>
+  
+  <style type="text/css">
+			.free-wall {
+				margin: 15px;
+			}
+		</style>
+</head>
+
+<body>
+  <script type="text/javascript" src="static/js/freewall.js"></script>
+  <div id="main">
+    <h1>Your Pictures</h1>
+    <p>These are the pictures you have saved. Click one to view more information!</p>
+  </div>
+  <div id="freewall" class="free-wall"></div>
+
+  <div id="loading">
+  <p>Loading your pictures...</p>
+  </div>
+
+  <div style="display:none" id="empty">You don't have any pictures!</div>
+
+  <script type="text/javascript">console.log("attempting to run get_album");</script>
+  <script type="text/javascript">$(document).ready(get_album());</script>
+</body>
+
+</html>
